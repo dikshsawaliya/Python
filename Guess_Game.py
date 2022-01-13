@@ -7,3 +7,5 @@ while guess_count < guess_limit:
     if guess_number == right_answer:
         print("You Guessed it right !")
         break
+else:
+    print("Oops, You lose !!!")
