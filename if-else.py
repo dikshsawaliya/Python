@@ -1,14 +1,26 @@
-good_credit = False
-bad_credit = True
+def is_leap(year):
+    leap = False
 
-if  good_credit:
-    print("Down payment 10%")
-    final_payment = 100 + 10 / 100
-    print(final_payment)
-else:
-    print("down payment 20%")
-    final_payment = 100 + 20/100
-    print(final_payment)
+    # Write your logic here
+
+    if year % 4 == 0:
+        is_leap = True
+    else:
+        is_leap = False
+        if year % 100 == 0:
+            is_leap = True
+        else:
+            is_leap = False
+            if year % 400 == 0:
+                is_leap = True
+
+    if is_leap == False:
+        is_leap = False
+        print("False")
+    else:
+        is_leap = True
+        print("True")
 
 
-
+year = int(input())
+print (is_leap(year))
